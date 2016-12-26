@@ -1,0 +1,116 @@
+//SCRIPTS------------------//
+alias PRACTICE NO
+alias YES "alias PRACTICE NO; exec practice1.cfg"
+alias NO "alias PRACTICE YES; exec practice2.cfg"
+//AWPER--------------------//
+alias +knife "use weapon_knife"
+alias -knife "invnextnongrenade"
+//GRAPH--------------------//
+net_graph 1
+net_graphheight "9999"
+net_graphpos "160"
+cl_showpos "0"
+alias "+scorenet" "+showscores; net_graphheight 0"
+alias "-scorenet" "-showscores; net_graphheight 9999"
+//DEATHS-------------------//
+developer "1"
+con_filter_text "Damage given"
+con_filter_text_out "Player:"
+con_filter_enable "2"
+//HAND---------------------//
+alias "left" "cl_righthand 0; bind mouse3 right"
+alias "right" "cl_righthand 1; bind mouse3 left"
+//AFK----------------------//
+alias AFKon "+forward; +moveleft; +left; cl_disablehtmlmotd 1" 
+alias AFKoff "-forward; -moveleft; -left; cl_disablehtmlmotd 0"
+//JUMPGRENADE--------------//
+alias "+jumpthrow" "+jump;-attack" 
+alias "-jumpthrow" "-jump" 
+//ANIMATION----------------//
+alias +spin_butterfly "-lookatweapon;+reload"
+alias -spin_butterfly "+lookatweapon;-reload"
+//BOMB---------------------//
+alias +dropBomb "use weapon_knife; use weapon_c4; drop" 
+alias -dropBomb "slot2; slot1" 
+//CLUTCH-------------------//
+alias clutch "clutchon"
+alias clutchon "toggle voice_enable;say_team "Clutchtime! Voice is deactivated to focus and hearing steps.";alias clutch clutchoff"
+alias clutchoff "toggle voice_enable;say_team "Clutch over. Voice is activated. Hopefully it was an success, if not fight on!"; alias clutch clutchon"
+//GRENADE------------------//
+alias altE1 "use weapon_flashbang"
+alias altE "bind e altE1"
+alias alt11 "use weapon_hegrenade"
+alias alt1 "bind 1 alt11"
+alias alt22 "use weapon_molotov; use weapon_incgrenade"
+alias alt2 "bind 2 alt22"
+alias alt33 "use weapon_smokegrenade"
+alias alt3 "bind 3 alt33"
+alias alt44 "use weapon_decoy"
+alias alt4 "bind 4 alt44"
+alias defE "bind e +use"
+alias def1 "bind 1 slot1"
+alias def2 "bind 2 slot2"
+alias def3 "bind 3 slot3"
+alias def4 "bind 4 slot4"
+alias +altbinds "alte; alt1; alt2; alt3; alt4"
+alias -altbinds "defE; def1; def2; def3; def4"
+//BUY----------------------//
+alias num0 "buy vesthelm"
+alias num1 "buy p250" 
+alias num2 "buy tec9" 		
+alias num3 "buy deagle"
+alias num4 "buy awp" 		
+alias num5 "buy ak47" 		
+alias num6 "buy ssg08" 		
+alias num7 "buy mac10"
+alias num8 "buy ump45"           
+alias num9 "buy mp7" 		
+alias num/ "buy hegrenade"
+alias num- "buy smokegrenade"
+alias num+ "buy molotov"
+alias numenter "buy defuser"
+alias num. "buy vest"
+alias num* "buy flashbang"
+//-------------------------//
+
+//BINDS--------------------//
+bind "N" "say_team Need Weapon"
+bind "J" "say_team I can drop"
+bind "Z" "holdpos; say_team SIT THE FUCK DOWN BOT" 
+bind "c" "+dropBomb; say_team DROPING THE BOMB"
+bind "f" "+lookatweapon; r_cleardecals"
+bind "q" "+spin_butterfly" 
+bind "x" "+voicerecord"
+bind "t" "+spray_menu"
+bind "-" "noclip"
+bind "," "PRACTICE"
+bind "." "hud_reloadscheme"
+bind "]" "AFKon; I'm AFK"
+bind "[" "AFKoff; I'm Not AFK"
+bind "F4" "clutch"
+bind "F5" "say Good Luck And Have Fun"
+bind "F6" "say Good Half"
+bind "F7" "say Good Game,Well Played"
+bind "ins" "bot_place"
+bind "TAB" "+scorenet"
+bind "mouse3" "left"
+bind "mouse4" "+knife"
+bind "mouse5" "+jumpthrow"
+bind "alt" "+altbinds" 
+bind kp_ins num0
+bind kp_end num1
+bind kp_downarrow num2
+bind kp_pgdn num3
+bind kp_leftarrow num4
+bind kp_5 num5
+bind kp_rightarrow num6
+bind kp_home num7
+bind kp_uparrow num8
+bind kp_pgup num9
+bind kp_slash num/
+bind kp_minus num-
+bind kp_plus num+
+bind kp_enter numenter
+bind kp_del num.
+bind kp_multiply num*
+//-------------------------//
