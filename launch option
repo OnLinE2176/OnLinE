@@ -1,0 +1,1 @@
+echo "PLEASE PUT -novid -tickrate 128 -high +con_enable 1 +exec FART -console -nod3d9ex  -cl_updaterate 128 -cl_cmdrate 128 ON LAUNCH OPTIONS"
